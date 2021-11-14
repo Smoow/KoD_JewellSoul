@@ -34,7 +34,7 @@ def show_credits():
 
 
 def choose_mode():
-    print('Modos: 1) Joia       2) Soul       3) Joia + Soul')
+    print('Modos: 1) Joia       2) Soul')
     mode = int(input('Digite o modo de operação do programa: '))
 
     return mode
@@ -106,8 +106,8 @@ def init_macro(mode):
 
             # Para obter altura e largura da janela
             rect = win32gui.GetWindowRect(process)
-            x = rect[0]+350
-            y = rect[1]+350
+            x = rect[0]+400
+            y = rect[1]+400
 
             # Colocar o cursor na posição da janela
             win32api.SetCursorPos((x, y))
@@ -119,9 +119,55 @@ def init_macro(mode):
 
             sleep(60*17)
 
-    if (mode == 3):
-       print('Em construção.')
-       return
+    # if (mode == 3):
+    #    print('Em construção.')
+    #    return
 
+    # if (mode == 4):
+    #     print('\nModo escolhido: Macro de Fada para Lan.')
+
+    #     process = attach_process()
+
+    #     shell = win32com.client.Dispatch("WScript.Shell")
+    #     shell.AppActivate("King of Destiny")
+    #     print(
+    #             f'\n*** Enviando ao processo: &{process}   |   Macro de Fada para Lan! ***')
+
+    #     while (True):
+    #         # Para obter altura e largura da janela
+    #         rect = win32gui.GetWindowRect(process)
+    #         x = rect[0]+730
+    #         y = rect[1]+310
+
+    #         # Colocar o cursor na posição da janela
+    #         win32api.SetCursorPos((x, y))
+
+    #         # Click Esquerdo no ultimo slot da primeira linha do inv
+    #         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
+    #         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
+
+    #         # Click Esquerdo no slot da fada
+    #         y -= 160
+    #         win32api.SetCursorPos((x, y))
+    #         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
+    #         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
+    #         sleep(2)
+
+    #         x = rect[0]+730
+    #         y = rect[1]+310
+
+    #         # Colocar o cursor na posição da janela
+    #         win32api.SetCursorPos((x, y))
+
+    #         # Click Esquerdo no ultimo slot da primeira linha do inv
+    #         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
+    #         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
+
+    #         # Click Esquerdo no slot da fada
+    #         y -= 160
+    #         win32api.SetCursorPos((x, y))
+    #         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, x, y, 0, 0)
+    #         win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP, x, y, 0, 0)
+    #         sleep(58)
 
 main()
